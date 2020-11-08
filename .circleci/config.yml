@@ -17,7 +17,7 @@ jobs: # 1 回の実行の基本作業単位
     steps: # `build` ジョブを構成するステップ
       - checkout # ソース コードを作業ディレクトリにチェック アウトします
       - run: sudo chown -R circleci:circleci /usr/local/bin
-      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.8/site-packages
       - restore_cache:
           # 依存関係キャッシュについては https://circleci.com/ja/docs/2.0/caching/ をお読みください
           key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
